@@ -35,7 +35,7 @@ function makeNotesArray() {
   ]
 }
 
-function makeMaliciousNotes() {
+function makeMaliciousNote() {
   const maliciousNote = {
     id: 4,
     name: 'Denver',
@@ -53,9 +53,14 @@ function makeMaliciousNotes() {
     date_created: new Date().toISOString(),
     folder_id: 3,
   }
+
+  return {
+    maliciousNote,
+    expectedNote,
+  }
 }
 
 module.exports = {
   makeNotesArray,
-  makeMaliciousNotes,
+  makeMaliciousNote,
 }

@@ -60,9 +60,7 @@ foldersRouter
   })
   .delete((req, res, next) => {
     FoldersService.deleteFolder(req.app.get('db'), req.params.folder_id)
-      .then(() => {
-        res.status(204).end()
-      })
+      .then(() => res.status(204).end())
       .catch(next)
   })
   .patch((req, res, next) => {
@@ -84,9 +82,7 @@ foldersRouter
       req.params.folder_id,
       folderToUpdate
     )
-      .then(() => {
-        return res.status(204).end()
-      })
+      .then(() => res.status(204).end())
       .catch(next)
   })
 

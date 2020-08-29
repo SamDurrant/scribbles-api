@@ -235,7 +235,7 @@ describe('Folders Endpoints', function () {
           )
       })
 
-      it(`responds with  400  when no  required fields supplied`, () => {
+      it(`responds with 400 when no required fields supplied`, () => {
         const idToUpdate = 2
 
         return supertest(app)
