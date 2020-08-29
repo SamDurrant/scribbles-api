@@ -79,11 +79,11 @@ describe('Folders Endpoints', function () {
           expect(res.body).to.have.property('id')
           expect(res.headers.location).to.eql(`/api/folders/${res.body.id}`)
         })
-        .then((postRes) => {
+        .then((postRes) =>
           supertest(app)
             .get(`/api/folders/${postRes.body.id}`)
             .expect(postRes.body)
-        })
+        )
     })
 
     const requiredFields = ['name']

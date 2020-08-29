@@ -9,7 +9,7 @@ const NotesService = {
     return db
       .insert(newNote)
       .into('notes')
-      .return('*')
+      .returning('*')
       .then((rows) => {
         return rows[0]
       })
